@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="portfolio.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="mediaqueries.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Rody's Portfolio</title>
@@ -15,7 +16,7 @@
         <div id="logo">
             <h3 class="h3 bold">&lt;RM/&gt;</h3>
         </div>
-        <div id="Navigation-container">
+        <div id="Navigation-desktop">
             <nav class="Navigation-Item nav1">
                 <ul class="body2 medium">
                     <li><a href="#About">About</a></li>
@@ -25,26 +26,104 @@
             </nav>
             <nav class="Navigation-Item nav2">
                 <ul>
-                    <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
-                                stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M19 3V7" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M21 5H17" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                    <li>
+                        <div class="icon-btn theme-btn">
+                            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19 3V7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21 5H17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                                <path
+                                    d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                    stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 2V4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 20V22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.92993 4.93005L6.33993 6.34005" stroke="#4B5563" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17.6599 17.66L19.0699 19.07" stroke="#4B5563" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 12H4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20 12H22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.33993 17.66L4.92993 19.07" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M19.0699 4.93005L17.6599 6.34005" stroke="#4B5563" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
                     </li>
-                    <li class="body2 medium" id="CV">Download CV</li>
+                    <button class="body2 medium" id="CV" onclick="window.open('./assets/resume.pdf')">Download
+                        CV</button>
                 </ul>
             </nav>
         </div>
+        <nav id="hamburger-nav">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <ul class="body2 medium">
+                        <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                        <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+                        <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+                    </ul>
+                    <ul class="nav2">
+                        <li onclick="toggleMenu()">
+                            <div class="icon-btn theme-btn">
+                                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                        stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M19 3V7" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M21 5H17" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                                    <path
+                                        d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                        stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 2V4" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 20V22" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M4.92993 4.93005L6.33993 6.34005" stroke="#4B5563" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17.6599 17.66L19.0699 19.07" stroke="#4B5563" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M2 12H4" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20 12H22" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M6.33993 17.66L4.92993 19.07" stroke="#4B5563" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M19.0699 4.93005L17.6599 6.34005" stroke="#4B5563" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </li>
+                        <button class="body2 medium" id="CV"
+                            onclick="toggleMenu(),window.open('./assets/resume.pdf')">Download CV</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <section id="FirstPage">
             <div class="Page-container FirstPage-container">
-
                 <div id="intro">
                     <h1>Hi, I’m Rody 🌸</h1>
                     <p class="body2 normal">
@@ -68,26 +147,30 @@
                         </svg>
                         Available for new projects!
                     </p>
-
                     <div class="icons">
-                        <div class="iconBox">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
-                                    stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M9 18C4.49 20 4 16 2 16" stroke="#4B5563" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="iconBox">
-                            <i class="bi bi-linkedin"></i>
-                        </div>
+                        <a href="https://github.com/meisru" target="_blank">
+                            <div class="icon-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
+                                        stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M9 18C4.49 20 4 16 2 16" stroke="#4B5563" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rody-aleidan-9a479b2b0/" target="_blank">
+                            <div class="icon-btn">
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="Frame Frame1">
                     <div class="boxFrame box1">
-                        <img class="imageFrame image1" src="images/DarkLogo.png" alt="Rody's Logo">
+                        <img class="imageFrame image1" src="assets/DarkLogo.png" alt="Rody's Logo">
                     </div>
                 </div>
             </div>
@@ -100,10 +183,9 @@
                 </div>
                 <div class="Frame Frame2">
                     <div class="boxFrame box2">
-                        <img class="imageFrame image2" src="images/laptop.png" alt="Laptop">
+                        <img class="imageFrame image2" src="assets/laptop.png" alt="Laptop">
                     </div>
                 </div>
-
                 <div class="Aboutcontent">
                     <h3 class="semibold">Curious about me?</h3>
                     <div class="body2 normal">
@@ -111,30 +193,27 @@
                             with an aspire to become a full-stack developer.
                             My vision is to create impactful websites and applications that support my community,
                             especially ones that serve my religion and country.</p>
-
                         <p>I am very enthusiastic about making the technical and visual elements of digital products
                             come to life. I care deeply about user experience, achieving precise design details, and
                             writing clean, efficient code.</p>
-
                         <p>I began my journey in 2022, and since then, I've continued to grow, taking on new
                             challenges and learning new things along the way.
                             I find joy on going from the idea to the product, seeing the results of hard
                             work, and learning a lot along the way.</p>
-
                         <p>When I'm not on developer mode, you'll find me reading, learning new things, or enjoying some
                             free time 📚. <br>
-                            My <a href="">Github</a> is where I share my latest projects, you can also
-                            follow me on <a href="">Linkedin</a>.
+                            My <a href="https://github.com/meisru" target="_blank">Github</a> is where I share my latest
+                            projects, you can also
+                            follow me on <a href="https://www.linkedin.com/in/rody-aleidan-9a479b2b0/"
+                                target="_blank">Linkedin</a>.
                         </p>
-
                         <p>Finally, some quick bits about me.</p>
                         <ul>
-                            <li>B.E. in Computer Science</li>
+                            <li>Studying Computer Science</li>
                             <li>Avid learner</li>
                             <li>Looking to work on new projects</li>
                         </ul>
                         <p>Feel free to reach out and say hello! That'll make me happy 💕</p>
-
                     </div>
                 </div>
             </div>
@@ -145,11 +224,9 @@
                 <div class="page-title">
                     <div class="titlebutton">Skills</div>
                 </div>
-
                 <div>
                     <p class="subtitle normal">The skills, tools and technologies I am good at:</p>
                 </div>
-
                 <div class="skills-icons body1">
                     <div>
                         <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="javascript">
@@ -165,7 +242,7 @@
                         <p>react</p>
                     </div>
                     <div>
-                        <img src="images/nextjs.svg" alt="next.js">
+                        <img src="assets/nextjs.svg" alt="next.js">
                         <p>next.js</p>
                     </div>
                     <div>
@@ -174,7 +251,7 @@
                         <p>node.js</p>
                     </div>
                     <div>
-                        <img src="images/icon-postgresql.png" alt="postgreSQL">
+                        <img src="assets/icon-postgresql.png" alt="postgreSQL">
                         <p>postgreSQL</p>
                     </div>
                     <div>
@@ -194,7 +271,6 @@
 
         <section id="Projects">
             <div class="Page-container projects-container">
-
                 <div>
                     <div class="page-title">
                         <div class="titlebutton">Projects</div>
@@ -203,11 +279,9 @@
                         <p class="subtitle normal">Some Projects I built:</p>
                     </div>
                 </div>
-
-
                 <div class="project-card">
                     <div class="project-view">
-                        <img src="images/laptop.png" alt="projectname">
+                        <img src="assets/laptop.png" alt="projectname">
                     </div>
                     <div class="project-details">
                         <p class="subtitle semibold">Fiskil</p>
@@ -219,7 +293,7 @@
                         <div class="titlebutton">javascript</div>
                         <div class="titlebutton">react</div>
                         <div class="titlebutton">PostgreSQL</div>
-                        <div>
+                        <div class="icon-btn">
                             <svg width="24" height="24" fill="none" viewbox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -232,14 +306,10 @@
                             </svg>
                         </div>
                     </div>
-
-
-
                 </div>
-
                 <div class="project-card">
                     <div class="project-view">
-                        <img src="images/laptop.png" alt="projectname">
+                        <img src="assets/laptop.png" alt="projectname">
                     </div>
                     <div class="project-details">
                         <p class="subtitle semibold">Fiskil</p>
@@ -251,7 +321,7 @@
                         <div class="titlebutton">javascript</div>
                         <div class="titlebutton">react</div>
                         <div class="titlebutton">PostgreSQL</div>
-                        <div>
+                        <div class="icon-btn">
                             <svg width="24" height="24" fill="none" viewbox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -264,7 +334,6 @@
                             </svg>
                         </div>
                     </div>
-
                 </div>
         </section>
 
@@ -273,8 +342,7 @@
                 <div class="page-title">
                     <div class="titlebutton">Get in touch</div>
                 </div>
-                <p class="subtitle normal">Feel free to reach out to me if you're looking for a developer,
-                    have a query, or simply want to connect.</p>
+                <p class="subtitle normal">Feel free to reach out to me!</p>
                 <div class="email">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -284,50 +352,39 @@
                             d="M29.3334 9.33325L17.3734 16.9333C16.9618 17.1912 16.4858 17.3279 16.0001 17.3279C15.5143 17.3279 15.0384 17.1912 14.6267 16.9333L2.66675 9.33325"
                             stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <h2 class="semibold">rudialeidan@gmail.com</h2>
-                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M32.6667 16.6667H19.3334C17.8607 16.6667 16.6667 17.8607 16.6667 19.3334V32.6667C16.6667 34.1395 17.8607 35.3334 19.3334 35.3334H32.6667C34.1395 35.3334 35.3334 34.1395 35.3334 32.6667V19.3334C35.3334 17.8607 34.1395 16.6667 32.6667 16.6667Z"
-                            stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M11.3334 27.3334C9.86675 27.3334 8.66675 26.1334 8.66675 24.6667V11.3334C8.66675 9.86675 9.86675 8.66675 11.3334 8.66675H24.6667C26.1334 8.66675 27.3334 9.86675 27.3334 11.3334"
-                            stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <h2 id="text-to-copy" class="semibold">rudialeidan@gmail.com</h2>
+                    <button id="copy-button" class="icon-btn">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32.6667 16.6667H19.3334C17.8607 16.6667 16.6667 17.8607 16.6667 19.3334V32.6667C16.6667 34.1395 17.8607 35.3334 19.3334 35.3334H32.6667C34.1395 35.3334 35.3334 34.1395 35.3334 32.6667V19.3334C35.3334 17.8607 34.1395 16.6667 32.6667 16.6667Z"
+                                stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M11.3334 27.3334C9.86675 27.3334 8.66675 26.1334 8.66675 24.6667V11.3334C8.66675 9.86675 9.86675 8.66675 11.3334 8.66675H24.6667C26.1334 8.66675 27.3334 9.86675 27.3334 11.3334"
+                                stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
                 </div>
 
-                <div class="form">
-                    <p class="subtitle normal">Or you can fill this form:</p>
-                    <form action="/submit" method="POST">
-                        <div>
-                            <input type="text" id="fname" name="fname" placeholder="Name" required>
-                        </div><br>
-                        <div>
-                            <input type="email" id="userEmail" name="userEmail" placeholder="Email" required>
-                        </div><br>
-                        <div>
-                            <textarea id="message" name="user_message" placeholder="Your message"></textarea>
-                        </div> <br>
-                        <button type="submit">submit</button>
-                    </form>
-
-                    <br>
-                    <div>
-                        <p class="body2 normal">You may also find me on these platforms!</p>
-                    </div>
-                </div>
+                <p class="subtitle normal">You may also find me here:</p>
                 <div class="icons">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
-                            stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M9 18C4.49 20 4 16 2 16" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-
-                    <i class="bi bi-linkedin"></i>
+                    <a href="https://github.com/meisru" target="_blank">
+                        <div class="icon-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 22V18C15.1392 16.7473 14.78 15.4901 14 14.5C17 14.5 20 12.5 20 9C20.08 7.75 19.73 6.52 19 5.5C19.28 4.35 19.28 3.15 19 2C19 2 18 2 16 3.5C13.36 3 10.64 3 8.00004 3.5C6.00004 2 5.00004 2 5.00004 2C4.70004 3.15 4.70004 4.35 5.00004 5.5C4.27191 6.51588 3.91851 7.75279 4.00004 9C4.00004 12.5 7.00004 14.5 10 14.5C9.61004 14.99 9.32004 15.55 9.15004 16.15C8.98004 16.75 8.93004 17.38 9.00004 18V22"
+                                    stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 18C4.49 20 4 16 2 16" stroke="#4B5563" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rody-aleidan-9a479b2b0/" target="_blank">
+                        <div class="icon-btn">
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                    </a>
                 </div>
-
-
         </section>
     </main>
 
@@ -335,6 +392,6 @@
         <p class="body3 normal">2024 | ❤️️ </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,92 @@
+/* Mobile Devices */
+@media (max-width: 768px) {
+    h1 {
+        font-weight: 600;
+    }
+    #intro {
+        width: 100%;
+    }
+    .image1 {
+        width: 240px;
+        height: 280px;
+        left: 12px;
+        bottom: 12px;
+    }
+    .box1 {
+        width: 280px;
+        height: 280px;
+
+    }
+    .image2 {
+        width: 280px;
+        height: 380px;
+        right: 12px;
+        bottom: 12px;
+    }
+    .box2 {
+        width: 320px;
+        height: 380px;
+    }
+
+    .skills-icons {
+        min-width: 300px;
+    }
+}
+
+/* tablets  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #intro {
+        width: 80%;
+    }
+    .image2 {
+        width: 100%;
+        height: 100%;
+        left: 30px;
+        bottom: 40px;
+    }
+
+    .box2 {
+        width: 320px;
+        height: 450px;
+    }
+}
+
+/* Desktop Devices */
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .subtitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .body1 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #FirstPage {
+        height: 100vh;
+    }
+
+    .project-view {
+        flex: 1 1 50%;
+    }
+    .project-details {
+        flex: 1 1 50%;
+    }
+}
+
+/* hamburger nav */
+@media screen and (max-width: 1000px) {
+    #Navigation-desktop {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+}
